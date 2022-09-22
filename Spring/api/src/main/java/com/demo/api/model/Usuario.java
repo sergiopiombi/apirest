@@ -15,6 +15,8 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @Column (name="nombre")
     private String nombre;
 
     public Usuario(){

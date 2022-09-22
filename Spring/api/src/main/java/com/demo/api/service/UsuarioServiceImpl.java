@@ -27,6 +27,7 @@ public class UsuarioServiceImpl  implements UsuarioService{
     @Override
     public Usuario saveUser(Usuario u) {
         return usuarioRepository.save(u);
+
     }
 
     @Override
