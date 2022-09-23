@@ -17,7 +17,7 @@ public class UsuarioController {
     UsuarioService usuarioService;
 
     @GetMapping("/saludar")
-    public String saludar(){return "Esta funcionando lpm  fdfdfd";}
+    public String saludar(){return "Esta funcionando";}
 
     @GetMapping("/all")
     public ArrayList<Usuario> getAllUser(){
@@ -27,6 +27,11 @@ public class UsuarioController {
     @GetMapping("/find/{id}")
     public Optional<Usuario> getUserById(@PathVariable("id") Long id){
             return usuarioService.getUserById(id);
+    }
+
+    @GetMapping("/findName/{name}")
+    public Optional<Usuario> getUserByName(@PathVariable("name") String nombre){
+        return usuarioService.getUserByName(nombre);
     }
 
     @PostMapping("/save")

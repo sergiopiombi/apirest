@@ -10,5 +10,6 @@ public interface UsuarioService {
     Optional<Usuario> getUserById(Long id);
     Usuario saveUser(Usuario u);
     boolean deleteUserById(Long id);
+    Optional<Usuario> getUserByName(String name);
 
 }

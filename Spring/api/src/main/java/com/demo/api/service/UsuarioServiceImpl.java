@@ -39,4 +39,11 @@ public class UsuarioServiceImpl  implements UsuarioService{
             return false;
         }
     }
+
+    @Override
+    public Optional<Usuario> getUserByName(String name) {
+        return usuarioRepository.findByNombre(name);
+    }
+
+
 }
