@@ -15,7 +15,7 @@ public class UsuarioServiceImpl  implements UsuarioService{
     UsuarioRepository usuarioRepository;
 
     @Override
-    public ArrayList<Usuario> getAlluser() {
+    public ArrayList<Usuario> getAllUser() {
         return (ArrayList<Usuario>) usuarioRepository.findAll();
     }
 
@@ -42,8 +42,11 @@ public class UsuarioServiceImpl  implements UsuarioService{
     }
 
     @Override
-    public Optional<Usuario> getUserByName(String name) {
-        return usuarioRepository.findByNombre(name);
+    public Optional<Usuario> getUserByName(String name) {return usuarioRepository.findByNombre(name); }
+
+    @Override
+    public Optional<Usuario> getUserByNameAndContrasena(String name, String password) {
+        return usuarioRepository.findByNombreAndContrasena(name,password);
     }
 
 

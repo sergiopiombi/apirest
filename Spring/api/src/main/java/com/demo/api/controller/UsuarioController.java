@@ -21,7 +21,7 @@ public class UsuarioController {
 
     @GetMapping("/all")
     public ArrayList<Usuario> getAllUser(){
-        return usuarioService.getAlluser();
+        return usuarioService.getAllUser();
     }
 
     @GetMapping("/find/{id}")
@@ -32,6 +32,11 @@ public class UsuarioController {
     @GetMapping("/findName/{name}")
     public Optional<Usuario> getUserByName(@PathVariable("name") String nombre){
         return usuarioService.getUserByName(nombre);
+    }
+
+    @GetMapping("/findNamepass/{name}/{password}")
+    public Optional<Usuario> getUserByNameAndPassword(@PathVariable("name") String nombre,@PathVariable("password")String password){
+        return usuarioService.getUserByNameAndContrasena(nombre,password);
     }
 
     @PostMapping("/save")
