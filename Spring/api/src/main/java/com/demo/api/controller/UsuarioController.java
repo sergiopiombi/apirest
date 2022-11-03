@@ -17,7 +17,7 @@ public class UsuarioController {
     UsuarioService usuarioService;
 
     @GetMapping("/saludar")
-    public String saludar(){return "Esta funcionando";}
+    public String saludar(){return "Hola";}
 
     @GetMapping("/all")
     public ArrayList<Usuario> getAllUser(){
