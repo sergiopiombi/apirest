@@ -13,4 +13,6 @@ public interface UsuarioService {
     Optional<Usuario> getUserByName(String name);
     Optional<Usuario> getUserByNameAndContrasena(String name,String password);
 
+    ArrayList<Usuario> getAlluserQuery(String nombre);
+
 }

@@ -20,6 +20,8 @@ class ApiApplicationTests {
 	void testSaludar() throws Exception {
 
 		Assertions.assertEquals("Hola",usuarioController.saludar());
+
+
 	}
 
 

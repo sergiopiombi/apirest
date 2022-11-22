@@ -24,6 +24,10 @@ public class UsuarioController {
         return usuarioService.getAllUser();
     }
 
+
+    @GetMapping("myquery/{nombre}")
+    public ArrayList<Usuario> findAllUsersQuery(@PathVariable("nombre") String nombre) {return usuarioService.getAlluserQuery(nombre);}
+
     @GetMapping("/find/{id}")
     public Optional<Usuario> getUserById(@PathVariable("id") Long id){
             return usuarioService.getUserById(id);

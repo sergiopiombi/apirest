@@ -49,5 +49,9 @@ public class UsuarioServiceImpl  implements UsuarioService{
         return usuarioRepository.findByNombreAndContrasena(name,password);
     }
 
+    public ArrayList<Usuario> getAlluserQuery(String nombre){
+        return (ArrayList<Usuario>) usuarioRepository.findAllUsersQuery(nombre);
+    }
+
 
 }
