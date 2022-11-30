@@ -3,6 +3,7 @@ package com.demo.api.controller;
 import com.demo.api.service.UsuarioService;
 import com.demo.api.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,6 +45,7 @@ public class UsuarioController {
     }
 
     @PostMapping("/save")
+    @ResponseStatus(HttpStatus.CREATED)
     public Usuario  saveUser(@RequestBody Usuario u){
         return usuarioService.saveUser(u);
     }
