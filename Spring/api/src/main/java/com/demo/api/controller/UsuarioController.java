@@ -44,6 +44,7 @@ public class UsuarioController {
         return usuarioService.getUserByNameAndContrasena(nombre,password);
     }
 
+
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
     public Usuario  saveUser(@RequestBody Usuario u){
